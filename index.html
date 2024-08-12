@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phaser Session Game</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+    #gameContainer {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+    }
+    #rightPanel {
+      width: 300px;
+      background-color: #fff;
+      padding: 20px;
+      border-left: 1px solid #ccc;
+    }
+    #rightPanel ul {
+      list-style: none;
+      padding: 0;
+    }
+    canvas {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div id="gameContainer"></div>
+  <div id="rightPanel">
+    <button id="startSessionBtn">Start Game</button>
+    <div>Session ID: <span id="sessionId"></span></div>
+    <div>Start Time: <span id="startTime"></span></div>
+    <div>End Time: <span id="endTime"></span></div>
+    <div id="counter">Counter: <span id="counterValue"></span></div>
+    <ul id="sessionList"></ul>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+  <script type="module" src="game.js"></script>
+</body>
+</html>
